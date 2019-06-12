@@ -1,0 +1,121 @@
+.universities {
+  display: block;
+  height: 700px;
+  width: 100%;
+
+  .university-card {
+    position: relative;
+    width: 100%;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 15px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 15px;
+      height: 15px;
+      background-color: #EC7B6A;
+    }
+
+    .card {
+      &_title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+  
+        .logo {
+          width: 48px;
+          height: 48px;
+          background-color: #EC7B6A;
+          margin-right: 25px;
+        }
+  
+        .university_name {
+          display: flex;
+
+          .name {
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
+
+          .span {
+            color: #939295;
+            font-size: 1rem;
+            margin-right: 10px;
+          }
+        }
+      }
+  
+      &_main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+
+        .speciality_info {
+          margin-bottom: 15px;
+
+          .facult_name {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .span {
+              margin-right: 54px;
+            }
+
+            .name {
+              font-size: 1.1rem;
+            }
+          }
+
+         .speciality_name {
+           display: flex;
+           align-items: center;
+
+            font-size: 1.2rem;
+            margin-right: 100px;
+          }
+        }
+  
+        .points {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          margin-right: 60px;
+  
+          .average_point {
+            margin-right: 25px;
+          }
+  
+          .point {
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+          
+          .info {
+            font-size: 0.7rem;
+            color: #939295;
+          }
+        }
+      }
+    }
+
+    .subjects {
+      display: flex;
+      color: #EC7B6A;
+      font-weight: 500;
+      justify-content: flex-end;
+    }
+
+    .subject {
+      margin-right: 20px;
+    }
+  }
+}
+
+
+

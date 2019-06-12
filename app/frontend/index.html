@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>El Nasurov</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">Поиск ВУЗа по результатам ЕГЭ</header>
+
+    <div class="main">
+      <div class="sidebar">
+          <div class="region">Россия, Москва</div>
+          <div class="ege-points">
+            <form class="ege-points_form">
+              <div class="ege-points_form-item">
+                <label for="infi">Русский</label>
+                <input type="text" name="rus" data-id="1" class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="math">Математика</label>
+                <input type="text" name="math" data-id="2"  class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="rus">Обществознание</label>
+                <input type="text" name="social-sciense" data-id="3"  class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="rus">Физика</label>
+                <input type="text" name="physics" data-id="4"  class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="infi">История</label>
+                <input type="text" name="history" data-id="5" class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="math">Биология</label>
+                <input type="text" name="biology" data-id="6"  class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="rus">Информатика</label>
+                <input type="text" name="computer-sciense" data-id="7"  class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="rus">Химия</label>
+                <input type="text" name="chemistry" data-id="8"  class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="math">Литература</label>
+                <input type="text" name="literature" data-id="9"  class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="rus">География</label>
+                <input type="text" name="geography" data-id="A"  class="ege-points_form-item">
+              </div>
+  
+              <div class="ege-points_form-item">
+                <label for="rus">Иностранный язык</label>
+                <input type="text" name="foreing-language" data-id="B"  class="ege-points_form-item">
+              </div>
+              
+              <input type="submit" class="ege-points_form-item submit">
+            </form>
+          </div>
+      </div>
+      
+      <div class="universities"></div>
+
+      <div class="re-enter">
+        <p>Ввести снова баллы</p>
+      </div>
+  </div>
+
+  
+  <script src="./js/hadnlebars.js"> </script>
+  <script src="./script.js"></script>
+
+  <script id='universitiesTemplate' type='text/template'>
+    {{#each list}}
+    <div class="university-card">
+      <div class="card_title">
+        <div class="logo"></div>
+        <div class="university_name">
+          <div class="span">Вуз:</div>
+          <div class="name">{{university}} / {{un_long_name}}</div>
+        </div>
+      </div>
+
+      <div class="card_main">
+        <div class="speciality_info">
+          <div class="facult_name">
+            <div class="span">Факультет:</div>
+            <div class="name">{{facult}} / {{facult_long_name}}</div>
+          </div>
+          <div class="speciality_name">
+            <div class="span">Cпециальность:</div>
+            <div class="name">{{name}}</div>
+          </div>
+        </div>
+      
+        <div class="points">
+          <div class="average_point">
+            <div class="point">{{points_average}}</div>
+            <div class="info">средний балл</div>
+          </div>
+          <div class="total_point">
+              <div class="point">{{points}}</div>
+              <div class="info">общий балл</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subjects">
+        <div class="subject">{{subject_1}}</div>
+        <div class="subject">{{subject_2}}</div>
+        <div class="subject">{{subject_3}}</div>
+      </div>
+   </div>
+    {{/each}}
+  </script>
+
+  <script id='errorRequestTemplate' type='text/template'>
+    <div class="errorRequest">
+      <h2>{{text}}</h2>
+    </div>
+  </script>
+</body>
+</html>

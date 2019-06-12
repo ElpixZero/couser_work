@@ -1,0 +1,129 @@
+body {
+  font-family: 'Merriweather', serif;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+.header {
+  display:  block;
+  background-color: #FFED93;
+  height: 100px;
+}
+
+/**************************************************************************************/
+.sidebar {
+  width: 420px;
+  border: 1px solid hsl(0, 0%, 0%);
+  margin-right: 50px;
+}
+
+.sidebar .region {
+  height: 100px;
+  font-size: 20px;
+  vertical-align: middle;
+  background: #007ACC;
+}
+.sidebar .ege-points_form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.sidebar .ege-points_form-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+  padding: 5px;
+}
+
+.sidebar .ege-points_form-item input {
+  width: 30px;
+}
+
+/*********************************************************************************************/
+
+.universities {
+  display: block;
+  height: 700px;
+  width: 100%;
+}
+
+.university-card {
+  width: 100%;
+  box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.1);
+  height: 200px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.card_title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background-color: #EC7B6A;
+  margin-right: 25px;
+}
+
+.card_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.university_name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.points {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-right: 80px;
+}
+
+.average_point {
+  margin-right: 25px;
+}
+
+.point {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.info {
+  font-size: 0.7rem;
+  color: #939295;
+}
+
+.speciality_name {
+  font-size: 1.15rem;
+  margin-right: 100px;
+}
+
+.subjects {
+  display: flex;
+  color: #EC7B6A;
+  font-weight: 500;
+}
+
+.subject {
+  margin-right: 20px;
+}
+
+
+
