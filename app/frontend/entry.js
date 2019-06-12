@@ -1,9 +1,12 @@
 import View from './js/view.js';
 
 window.onload = function() {
-  const form = document.querySelector('.ege-points_form');
+  const form = document.querySelector('.ege-form');
   const sidebar = document.querySelector('.sidebar');
   const reEnterButton = document.querySelector('.re-enter');
+  const overlay = document.querySelector('.overlay');
+  const resultsDiv = document.querySelector('.universities');
+
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -41,7 +44,6 @@ window.onload = function() {
     )
     .then( data => {
       console.log(data);
-      let resultsDiv = document.querySelector('.universities');
 
       if (data.error) {
         resultsDiv.innerHTML = View.render('errorRequest', {
@@ -58,9 +60,10 @@ window.onload = function() {
       console.log('Fetch Error :-S', err);  
     });
     
-
-    sidebar.style.display = 'none';
+    console.log(reEnterButton);
     reEnterButton.classList.add('reEnter-animation-show');   
+    overlay.style.display = 'none';
+    sidebar.style.display = 'none';
     // reEnterButton.style.display = 'block';
   })
   
@@ -68,7 +71,8 @@ window.onload = function() {
     reEnterButton.classList.remove('reEnter-animation-show');
     reEnterButton.classList.add('reEnter-animation-hide');
 
-    sidebar.style.display = 'block';
+    overlay.style.display = 'block';
+    resultsDiv.innerHTML = '';
     document.documentElement.scrollTop = 0;
 
     sidebar.classList.add('sidebar-animation');

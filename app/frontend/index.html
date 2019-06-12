@@ -8,79 +8,84 @@
   <title>El Nasurov</title>
 </head>
 <body>
+
   <div class="container">
     <header class="header">Поиск ВУЗа по результатам ЕГЭ</header>
 
     <div class="main">
-      <div class="sidebar">
-          <div class="region">Россия, Москва</div>
-          <div class="ege-points">
-            <form class="ege-points_form">
-              <div class="ege-points_form-item">
-                <label for="infi">Русский</label>
-                <input type="text" name="rus" data-id="1" class="ege-points_form-item">
-              </div>
   
-              <div class="ege-points_form-item">
-                <label for="math">Математика</label>
-                <input type="text" name="math" data-id="2"  class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="rus">Обществознание</label>
-                <input type="text" name="social-sciense" data-id="3"  class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="rus">Физика</label>
-                <input type="text" name="physics" data-id="4"  class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="infi">История</label>
-                <input type="text" name="history" data-id="5" class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="math">Биология</label>
-                <input type="text" name="biology" data-id="6"  class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="rus">Информатика</label>
-                <input type="text" name="computer-sciense" data-id="7"  class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="rus">Химия</label>
-                <input type="text" name="chemistry" data-id="8"  class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="math">Литература</label>
-                <input type="text" name="literature" data-id="9"  class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="rus">География</label>
-                <input type="text" name="geography" data-id="A"  class="ege-points_form-item">
-              </div>
-  
-              <div class="ege-points_form-item">
-                <label for="rus">Иностранный язык</label>
-                <input type="text" name="foreing-language" data-id="B"  class="ege-points_form-item">
-              </div>
-              
-              <input type="submit" class="ege-points_form-item submit">
-            </form>
-          </div>
-      </div>
-      
       <div class="universities"></div>
 
       <div class="re-enter">
         <p>Ввести снова баллы</p>
       </div>
+    </div>
+  </div>
+
+  <div class="overlay">
+    <div class="overlay-wrap">
+      <h1 class="overlay__title">Добро пожаловать на наш портал!</h1>
+      <div class="overlay__content">
+        <div class="overlay__helpers">
+          <p class="overlay__help">Введите попредметно баллы ЕГЭ и нажмите на кнопку "Отправить"</p>
+          <p class="overlay__help">Для повторного ввода баллов воспользуйте кнопкой право-нижнем углу</p>
+        </div>
+       
+        <form class="overlay__form ege-form">
+          <div class="block ege-form__group ege-form__rus">
+            <label for="infi">Русский</label>
+            <input type="text" name="rus" data-id="1" class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group ege-form__math">
+            <label for="math">Математика</label>
+            <input type="text" name="math" data-id="2"  class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group ege-form__physics">
+            <label for="rus">Физика</label>
+            <input type="text" name="physics" data-id="4" class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group ege-form__history">
+            <label for="infi">История</label>
+            <input type="text" name="history" data-id="5" class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group">
+            <label for="math">Биология</label>
+            <input type="text" name="biology" data-id="6"  class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group">
+            <label for="rus">Информатика</label>
+            <input type="text" name="computer-sciense" data-id="7"  class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group">
+            <label for="rus">Химия</label>
+            <input type="text" name="chemistry" data-id="8"  class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group">
+            <label for="math">Литература</label>
+            <input type="text" name="literature" data-id="9"  class="ege-points_form-item">
+          </div>
+
+          <div class="ege-form__group">
+            <label for="rus">География</label>
+            <input type="text" name="geography" data-id="A"  class="ege-points_form-item">
+          </div>
+
+          <div class="ege-form__group">
+            <label for="rus">Иностранный язык</label>
+            <input type="text" name="foreing-language" data-id="B"  class="ege-points_form-item">
+          </div>
+        
+          <input type="submit" class="ege-form__submit">
+        </form>
+      </div>
+    </div>
   </div>
 
   
