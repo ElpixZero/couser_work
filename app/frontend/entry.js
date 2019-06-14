@@ -6,7 +6,7 @@ window.onload = function() {
   const reEnterButton = document.querySelector('.re-enter');
   const overlay = document.querySelector('.overlay');
   const resultsDiv = document.querySelector('.universities');
-
+  const continueButton = document.querySelector('.overlay__continue');
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -25,6 +25,8 @@ window.onload = function() {
         formData.totalPoints += Number(tempFormData.get(key));
       };
     }
+
+    console.log(JSON.stringify(formData));
     
     fetch('/test', {
       method: 'POST',
@@ -62,10 +64,13 @@ window.onload = function() {
     
     console.log(reEnterButton);
     reEnterButton.classList.add('reEnter-animation-show');   
-    overlay.style.display = 'none';
-    sidebar.style.display = 'none';
     // reEnterButton.style.display = 'block';
   })
+
+
+  continueButton.addEventListener('click', function() {
+    overlay.style.display = 'none';
+  });
   
   reEnterButton.addEventListener('click', function() {
     reEnterButton.classList.remove('reEnter-animation-show');
@@ -74,8 +79,6 @@ window.onload = function() {
     overlay.style.display = 'block';
     resultsDiv.innerHTML = '';
     document.documentElement.scrollTop = 0;
-
-    sidebar.classList.add('sidebar-animation');
   })
 }
 

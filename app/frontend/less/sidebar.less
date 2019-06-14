@@ -1,4 +1,37 @@
-.sidebar {
-  
-}
+.ege-form {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  max-width: 400px;
 
+  &__groups {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__submit {
+    display: block;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #ffffffb8;
+    border: 1px solid;
+  }
+
+  &__group {
+    margin-bottom: 20px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      margin-right: 10px;
+    }
+
+    label {
+      margin-bottom: 0;
+      line-height: 2;
+    }
+  }
+}

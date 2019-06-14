@@ -3,7 +3,9 @@ import Model from './js/model.js';
 export default function() {
   const form = document.querySelector('.ege-points_form');
   const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.overlay');
   const reEnterButton = document.querySelector('.re-enter');
+  const continueButton = document.querySelector('.overlay__continue');
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -27,6 +29,10 @@ export default function() {
     sidebar.style.display = 'none';   
     reEnterButton.style.display = 'block';
   });
+
+  continueButton.addEventListener('click', function() {
+    overlay.style.display = 'none'; 
+  })
   
   
   reEnterButton.addEventListener('click', function() {

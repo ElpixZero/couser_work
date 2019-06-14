@@ -13,6 +13,66 @@
     <header class="header">Поиск ВУЗа по результатам ЕГЭ</header>
 
     <div class="main">
+      <form class="sidebar ege-form">
+        <div class="ege-form__groups">
+          <div class="block ege-form__group ege-form__rus">
+            <label for="rus">Русский</label>
+            <input type="text" name="rus" data-id="1" class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group ege-form__math">
+            <label for="math">Математика</label>
+            <input type="text" name="math" data-id="2"  class="ege-points_form-item">
+          </div>
+
+          <div class="block ege-form__group ege-form__soc-sciense">
+              <label for="social-society">Обществознание</label>
+              <input type="text" name="social-society" data-id="3" class="ege-points_form-item">
+            </div>
+        
+          <div class="block ege-form__group ege-form__physics">
+            <label for="physics">Физика</label>
+            <input type="text" name="physics" data-id="4" class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group ege-form__history">
+            <label for="history">История</label>
+            <input type="text" name="history" data-id="5" class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group">
+            <label for="biology">Биология</label>
+            <input type="text" name="biology" data-id="6"  class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group">
+            <label for="computer-sciense">Информатика</label>
+            <input type="text" name="computer-sciense" data-id="7"  class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group">
+            <label for="chemistry">Химия</label>
+            <input type="text" name="chemistry" data-id="8"  class="ege-points_form-item">
+          </div>
+        
+          <div class="block ege-form__group">
+            <label for="literature">Литература</label>
+            <input type="text" name="literature" data-id="9"  class="ege-points_form-item">
+          </div>
+
+          <div class="ege-form__group">
+            <label for="geography">География</label>
+            <input type="text" name="geography" data-id="A"  class="ege-points_form-item">
+          </div>
+
+          <div class="ege-form__group">
+            <label for="foreing-language">Иностранный язык</label>
+            <input type="text" name="foreing-language" data-id="B"  class="ege-points_form-item">
+          </div>
+        </div>
+        
+          <input type="submit" class="ege-form__submit">
+      </form>
   
       <div class="universities"></div>
 
@@ -27,63 +87,27 @@
       <h1 class="overlay__title">Добро пожаловать на наш портал!</h1>
       <div class="overlay__content">
         <div class="overlay__helpers">
-          <p class="overlay__help">Введите попредметно баллы ЕГЭ и нажмите на кнопку "Отправить"</p>
-          <p class="overlay__help">Для повторного ввода баллов воспользуйте кнопкой право-нижнем углу</p>
+          <p class="overlay__help">Введите попредметно баллы ЕГЭ в левой части экрана и нажимите "Искать"</p>
+          <p class="overlay__help">Для повторного ввода баллов воспользуйтесь кнопкой право-нижнем углу</p>
         </div>
-       
-        <form class="overlay__form ege-form">
-          <div class="block ege-form__group ege-form__rus">
-            <label for="infi">Русский</label>
-            <input type="text" name="rus" data-id="1" class="ege-points_form-item">
-          </div>
-        
-          <div class="block ege-form__group ege-form__math">
-            <label for="math">Математика</label>
-            <input type="text" name="math" data-id="2"  class="ege-points_form-item">
-          </div>
-        
-          <div class="block ege-form__group ege-form__physics">
-            <label for="rus">Физика</label>
-            <input type="text" name="physics" data-id="4" class="ege-points_form-item">
-          </div>
-        
-          <div class="block ege-form__group ege-form__history">
-            <label for="infi">История</label>
-            <input type="text" name="history" data-id="5" class="ege-points_form-item">
-          </div>
-        
-          <div class="block ege-form__group">
-            <label for="math">Биология</label>
-            <input type="text" name="biology" data-id="6"  class="ege-points_form-item">
-          </div>
-        
-          <div class="block ege-form__group">
-            <label for="rus">Информатика</label>
-            <input type="text" name="computer-sciense" data-id="7"  class="ege-points_form-item">
-          </div>
-        
-          <div class="block ege-form__group">
-            <label for="rus">Химия</label>
-            <input type="text" name="chemistry" data-id="8"  class="ege-points_form-item">
-          </div>
-        
-          <div class="block ege-form__group">
-            <label for="math">Литература</label>
-            <input type="text" name="literature" data-id="9"  class="ege-points_form-item">
+
+        <div class="overlay__inform inform-circle">
+          <div class="inform-circle__img">
+              <img src="./img/reu.png" alt="РЭУ">
           </div>
 
-          <div class="ege-form__group">
-            <label for="rus">География</label>
-            <input type="text" name="geography" data-id="A"  class="ege-points_form-item">
+          <div class="inform-circle__title">
+            <span>Атлас вуза</span>
           </div>
 
-          <div class="ege-form__group">
-            <label for="rus">Иностранный язык</label>
-            <input type="text" name="foreing-language" data-id="B"  class="ege-points_form-item">
+          <div class="inform-circle__text">
+            <p>В атласе собраны проходные баллы по всем специальностям, действующим в <span class="reu-name">РЭУ им. Г.В. Плеханова</span>.</p>
           </div>
-        
-          <input type="submit" class="ege-form__submit">
-        </form>
+        </div>
+      </div>
+
+      <div class="overlay__continue">
+        <button class="overlay__button">Продолжить</button>
       </div>
     </div>
   </div>
@@ -96,7 +120,9 @@
     {{#each list}}
     <div class="university-card">
       <div class="card_title">
-        <div class="logo"></div>
+        <div class="logo">
+          <img src="./img/reu.jpg" alt="РЭУ">
+        </div>
         <div class="university_name">
           <div class="span">Вуз:</div>
           <div class="name">{{university}} / {{un_long_name}}</div>
@@ -138,7 +164,7 @@
 
   <script id='errorRequestTemplate' type='text/template'>
     <div class="errorRequest">
-      <h2>{{text}}</h2>
+      <h2>{{data.message}}...</h2>
     </div>
   </script>
 </body>
