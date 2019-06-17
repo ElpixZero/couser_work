@@ -39,7 +39,7 @@ app.post('/test', (req, res) => {
     });
   } else {
     let sql = `
-      SELECT T1.id,  points, FLOOR(points/LENGTH(T1.id)) as points_average, T0.university, T0.un_long_name, T0.facult, T0.facult_long_name, T0.name, sub_1, sub_2, sub_3, sub_4, subject_1, subject_2, subject_3, subject_4
+      SELECT T1.id, points, FLOOR(points/LENGTH(T1.id)) as points_average, T0.university, T0.un_long_name, T0.facult, T0.facult_long_name, T0.name, sub_1, sub_2, sub_3, sub_4, subject_1, subject_2, subject_3, subject_4
         FROM 
         (SELECT  specialities.subjects as main_id, points, universities.long_name as un_long_name, facults.long_name as facult_long_name,
           speciality.name, universities.short_name as university, facults.name as facult from specialities
@@ -63,7 +63,7 @@ app.post('/test', (req, res) => {
             where (subjects.subject_4 = subject.id)
             group by id
         ) T4
-        where T0.main_id RLIKE '^[${req.body.subjectsId}]+$' and T0.main_id = T1.id and T1.id = T2.id and T1.id = T3.id and T1.id = T4.id;
+        where T0.main_id RLIKE '^[${req.body.subjectsId}]+$' and T0.main_id = T1.id and T1.id = T2.id and T1.id = T3.id and T1.id = T4.id and points <= ${req.body.totalPoints};
     `;
 
     db.query(sql, (err, result) => {
