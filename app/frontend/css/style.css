@@ -318,22 +318,37 @@ input[type='text']:focus {
   border-color: #FFED93;
   background-color: rgba(255, 255, 255, 0.9);
 }
+.button {
+  border-radius: 8%;
+}
+.button:hover {
+  -webkit-transform: scale(1.025);
+      -ms-transform: scale(1.025);
+          transform: scale(1.025);
+}
 .header {
   display: block;
-  background-color: black;
-  height: 100px;
-  color: #fff;
+  background-color: #F8F7F1;
+  height: 80px;
+  color: #000;
   font-size: 45px;
-  font-style: italic;
-  text-align: center;
   padding: 15px 0;
+  text-align: center;
+  border: 1px solid #F8F7F1;
+  border-radius: 3%;
+}
+.header__title {
+  padding-left: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  margin: 0;
 }
 .ege-form {
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 0 auto;
-  max-width: 400px;
+  margin-right: 50px;
 }
 .ege-form__groups {
+  max-width: 380px;
+  background-color: #F8F7F1;
   margin: 0 auto;
   display: -webkit-box;
   display: flex;
@@ -342,33 +357,48 @@ input[type='text']:focus {
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
+  margin-bottom: 20px;
+  border-radius: 2%;
+  border: 1px solid #F8F7F1;
 }
 .ege-form__submit {
   display: block;
   margin: 0 auto;
   padding: 16px;
-  background-color: #ffffffb8;
-  border: 1px solid;
+  background-color: #e6e5e2;
+  border: 1px solid #000;
+  border-radius: 8%;
+}
+.ege-form__submit:hover {
+  background-color: #fff;
 }
 .ege-form__group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   flex-basis: 100%;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
           justify-content: space-between;
+  padding: 5px 10px;
 }
-.ege-form__group input {
-  margin-right: 10px;
+.ege-form__group:hover {
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
 }
 .ege-form__group label {
   margin-bottom: 0;
   line-height: 2;
+  letter-spacing: 1.1px;
 }
 .universities {
   display: block;
-  height: 700px;
   width: 100%;
+}
+.universities__startInform {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 25px;
 }
 .universities .university-card {
   position: relative;
@@ -478,11 +508,11 @@ input[type='text']:focus {
 }
 .re-enter {
   position: fixed;
-  bottom: 50px;
+  bottom: 30px;
   right: -200px;
   width: 150px;
   height: 70px;
-  background-color: #ff7070;
+  background-color: #ff7070d9;
   box-shadow: 0px 2px 10px 0 #ff7070;
   display: block;
 }
@@ -528,7 +558,7 @@ input[type='text']:focus {
     right: -200px;
   }
   100% {
-    right: 100px;
+    right: 30px;
   }
 }
 @keyframes shit {
@@ -536,7 +566,7 @@ input[type='text']:focus {
     right: -200px;
   }
   100% {
-    right: 100px;
+    right: 30px;
   }
 }
 .overlay {
@@ -597,8 +627,8 @@ input[type='text']:focus {
   bottom: 4%;
 }
 .overlay__button {
-  font-size: 20px;
-  padding: 20px;
+  font-size: 15px;
+  padding: 15px;
 }
 .inform-circle {
   background: #fff;

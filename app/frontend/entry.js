@@ -62,22 +62,19 @@ window.onload = function() {
       console.log('Fetch Error :-S', err);  
     });
     
-    console.log(reEnterButton);
-    reEnterButton.classList.add('reEnter-animation-show');   
-    // reEnterButton.style.display = 'block';
+    reEnterButton.classList.add('reEnter-animation-show');
+    sidebar.style.display = 'none';   
   })
 
 
   continueButton.addEventListener('click', function() {
-    overlay.style.display = 'none';
-  });
+    overlay.style.display = 'none'; 
+  })
   
   reEnterButton.addEventListener('click', function() {
     reEnterButton.classList.remove('reEnter-animation-show');
     reEnterButton.classList.add('reEnter-animation-hide');
-
-    overlay.style.display = 'block';
-    resultsDiv.innerHTML = '';
+    sidebar.style.display = 'block';   
     document.documentElement.scrollTop = 0;
   })
 }

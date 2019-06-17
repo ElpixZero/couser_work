@@ -1,7 +1,7 @@
 import Model from './js/model.js';
 
 export default function() {
-  const form = document.querySelector('.ege-points_form');
+  const form = document.querySelector('.ege-form');
   const sidebar = document.querySelector('.sidebar');
   const overlay = document.querySelector('.overlay');
   const reEnterButton = document.querySelector('.re-enter');
@@ -36,6 +36,7 @@ export default function() {
   
   
   reEnterButton.addEventListener('click', function() {
+    console.log('gg');
     reEnterButton.classList.add('reEnter-animation');
     sidebar.style.display = 'block';
     document.documentElement.scrollTop = 0;

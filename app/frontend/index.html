@@ -10,73 +10,81 @@
 <body>
 
   <div class="container">
-    <header class="header">Поиск ВУЗа по результатам ЕГЭ</header>
+    <header class="header">
+      <h1 class="header__title">#ХОЧУВРЭУНАБЮДЖЕТ</h1>
+    </header>
 
     <div class="main">
       <form class="sidebar ege-form">
         <div class="ege-form__groups">
           <div class="block ege-form__group ege-form__rus">
             <label for="rus">Русский</label>
-            <input type="text" name="rus" data-id="1" class="ege-points_form-item">
+            <input type="text" placeholder='от 27' name="rus" data-id="1" class="ege-points_form-item">
           </div>
         
           <div class="block ege-form__group ege-form__math">
             <label for="math">Математика</label>
-            <input type="text" name="math" data-id="2"  class="ege-points_form-item">
+            <input type="text" placeholder='от 36' name="math" data-id="2"  class="ege-points_form-item">
           </div>
 
           <div class="block ege-form__group ege-form__soc-sciense">
               <label for="social-society">Обществознание</label>
-              <input type="text" name="social-society" data-id="3" class="ege-points_form-item">
+              <input type="text" placeholder='от 42' name="social-society" data-id="3" class="ege-points_form-item">
             </div>
         
           <div class="block ege-form__group ege-form__physics">
             <label for="physics">Физика</label>
-            <input type="text" name="physics" data-id="4" class="ege-points_form-item">
+            <input type="text" placeholder='от 36' name="physics" data-id="4" class="ege-points_form-item">
           </div>
         
           <div class="block ege-form__group ege-form__history">
             <label for="history">История</label>
-            <input type="text" name="history" data-id="5" class="ege-points_form-item">
+            <input type="text" placeholder='от 32' placeholder='' name="history" data-id="5" class="ege-points_form-item">
           </div>
         
           <div class="block ege-form__group">
             <label for="biology">Биология</label>
-            <input type="text" name="biology" data-id="6"  class="ege-points_form-item">
+            <input type="text" placeholder='от 36' placeholder='' name="biology" data-id="6"  class="ege-points_form-item">
           </div>
         
           <div class="block ege-form__group">
             <label for="computer-sciense">Информатика</label>
-            <input type="text" name="computer-sciense" data-id="7"  class="ege-points_form-item">
+            <input type="text" placeholder='от 40' placeholder='' name="computer-sciense" data-id="7"  class="ege-points_form-item">
           </div>
         
           <div class="block ege-form__group">
             <label for="chemistry">Химия</label>
-            <input type="text" name="chemistry" data-id="8"  class="ege-points_form-item">
+            <input type="text" placeholder='от 36' name="chemistry" data-id="8"  class="ege-points_form-item">
           </div>
         
           <div class="block ege-form__group">
             <label for="literature">Литература</label>
-            <input type="text" name="literature" data-id="9"  class="ege-points_form-item">
+            <input type="text" placeholder='от 32' name="literature" data-id="9"  class="ege-points_form-item">
           </div>
 
           <div class="ege-form__group">
             <label for="geography">География</label>
-            <input type="text" name="geography" data-id="A"  class="ege-points_form-item">
+            <input type="text" placeholder='от 37' name="geography" data-id="A"  class="ege-points_form-item">
           </div>
 
           <div class="ege-form__group">
             <label for="foreing-language">Иностранный язык</label>
-            <input type="text" name="foreing-language" data-id="B"  class="ege-points_form-item">
+            <input type="text" placeholder='от 22' name="foreing-language" data-id="B"  class="ege-points_form-item">
           </div>
         </div>
         
-          <input type="submit" class="ege-form__submit">
+        <div class="div">
+          <input type="submit" class="ege-form__submit button">
+        </div>
       </form>
   
-      <div class="universities"></div>
+      <div class="universities">
+        <div class="universities__startInform">
+          <h2>Здесь будут подходящие вам специальности</h2>
+        </div>
+      </div>
 
-      <div class="re-enter">
+      <div class="re-enter button">
         <p>Ввести снова баллы</p>
       </div>
     </div>
@@ -88,7 +96,7 @@
       <div class="overlay__content">
         <div class="overlay__helpers">
           <p class="overlay__help">Введите попредметно баллы ЕГЭ в левой части экрана и нажимите "Искать"</p>
-          <p class="overlay__help">Для повторного ввода баллов воспользуйтесь кнопкой право-нижнем углу</p>
+          <p class="overlay__help">Для повторного ввода баллов воспользуйтесь кнопкой в правом нижнем углу</p>
         </div>
 
         <div class="overlay__inform inform-circle">
@@ -107,7 +115,7 @@
       </div>
 
       <div class="overlay__continue">
-        <button class="overlay__button">Продолжить</button>
+        <button class="overlay__button button">Продолжить</button>
       </div>
     </div>
   </div>
