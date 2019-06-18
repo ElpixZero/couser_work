@@ -10,6 +10,7 @@ window.onload = function() {
 
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    resultsDiv.innerHTML = '';
 
     const tempFormData = new FormData(form);
 
