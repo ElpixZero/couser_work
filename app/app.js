@@ -68,7 +68,13 @@ app.post('/test', (req, res) => {
 
     db.query(sql, (err, result) => {
       if (err) throw err;
-      res.send(result);
+      if (result.length) {    
+        res.send(result);
+      } else res.send({
+        error: 'true',
+        message: 'К сожалению, нет подходящих для Вас специальностей'
+      })
+      
     });
   }
 });
