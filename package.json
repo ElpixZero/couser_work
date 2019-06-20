@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nodemon ./server.js localhost 8080",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./app/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-loader": "^8.0.5",
+    "body-parser": "^1.19.0",
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
+    "ejs": "^2.6.1",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^4.0.1",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.0",
+    "path": "^0.12.7",
+    "webpack-stream": "^5.2.1"
+  }
+}
