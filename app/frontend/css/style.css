@@ -297,6 +297,8 @@ template {
   -webkit-box-pack: justify;
           justify-content: space-between;
   margin-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .container {
   max-width: 1400px;
@@ -342,6 +344,14 @@ a:hover {
   color: inherit;
   text-decoration: none;
 }
+@media (max-width: 1025px) {
+  .main {
+    margin-top: 10px;
+  }
+  .button {
+    padding: 10px;
+  }
+}
 .header {
   display: block;
   background-color: #f3f2effa;
@@ -354,10 +364,14 @@ a:hover {
   border-radius: 3%;
 }
 .header__title {
-  padding-left: 50px;
   line-height: 50px;
   font-size: 30px;
   margin: 0;
+}
+@media (max-width: 426px) {
+  .header__title {
+    font-size: 25px;
+  }
 }
 .ege-form {
   margin-right: 50px;
@@ -411,19 +425,24 @@ a:hover {
   display: block;
   width: 100%;
 }
+.universities__errorRequest {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 25px;
+}
 .universities__startInform {
   text-align: center;
   margin-top: 20%;
   font-size: 25px;
 }
-.universities .university-card {
+.university-card {
   position: relative;
   width: 100%;
   box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   padding: 15px;
 }
-.universities .university-card:after {
+.university-card:after {
   content: '';
   position: absolute;
   top: 10px;
@@ -432,34 +451,34 @@ a:hover {
   height: 15px;
   background-color: #EC7B6A;
 }
-.universities .university-card .card_title {
+.university-card .card_title {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
   margin-bottom: 25px;
 }
-.universities .university-card .card_title .logo {
+.university-card .card_title .logo {
   width: 65px;
   margin-right: 25px;
 }
-.universities .university-card .card_title .logo img {
+.university-card .card_title .logo img {
   width: 100%;
 }
-.universities .university-card .card_title .university_name {
+.university-card .card_title .university_name {
   display: -webkit-box;
   display: flex;
 }
-.universities .university-card .card_title .university_name .name {
+.university-card .card_title .university_name .name {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.universities .university-card .card_title .university_name .span {
+.university-card .card_title .university_name .span {
   color: #939295;
   font-size: 1rem;
   margin-right: 10px;
 }
-.universities .university-card .card_main {
+.university-card .card_main {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -468,23 +487,23 @@ a:hover {
           align-items: center;
   margin-bottom: 35px;
 }
-.universities .university-card .card_main .speciality_info {
+.university-card .card_main .speciality_info {
   margin-bottom: 15px;
 }
-.universities .university-card .card_main .speciality_info .facult_name {
+.university-card .card_main .speciality_info .facult_name {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
   margin-bottom: 15px;
 }
-.universities .university-card .card_main .speciality_info .facult_name .span {
+.university-card .card_main .speciality_info .facult_name .span {
   margin-right: 54px;
 }
-.universities .university-card .card_main .speciality_info .facult_name .name {
+.university-card .card_main .speciality_info .facult_name .name {
   font-size: 1.1rem;
 }
-.universities .university-card .card_main .speciality_info .speciality_name {
+.university-card .card_main .speciality_info .speciality_name {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -492,7 +511,7 @@ a:hover {
   font-size: 1.2rem;
   margin-right: 100px;
 }
-.universities .university-card .card_main .points {
+.university-card .card_main .points {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -500,18 +519,18 @@ a:hover {
   text-align: center;
   margin-right: 60px;
 }
-.universities .university-card .card_main .points .average_point {
+.university-card .card_main .points .average_point {
   margin-right: 25px;
 }
-.universities .university-card .card_main .points .point {
+.university-card .card_main .points .point {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.universities .university-card .card_main .points .info {
+.university-card .card_main .points .info {
   font-size: 0.7rem;
   color: #939295;
 }
-.universities .university-card .subjects {
+.university-card .subjects {
   display: -webkit-box;
   display: flex;
   color: #EC7B6A;
@@ -519,8 +538,60 @@ a:hover {
   -webkit-box-pack: end;
           justify-content: flex-end;
 }
-.universities .university-card .subject {
+.university-card .subject {
   margin-right: 20px;
+}
+@media (max-width: 1025px) {
+  .universities__startInform h2 {
+    font-size: 30px;
+  }
+  .universities__errorRequest h2 {
+    font-size: 30px;
+  }
+  .ege-form__group {
+    margin-bottom: 0;
+  }
+  .ege-form__submit {
+    padding: 10px;
+  }
+}
+@media (max-width: 769px) {
+  .university-card:after {
+    top: 5px;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+  }
+  .university-card .card_main .points {
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  .university-card .card_main .speciality_info .speciality_name {
+    margin-right: 20px;
+  }
+  .university-card .card_main .speciality_info .speciality_name .name {
+    font-size: 1.05rem;
+  }
+  .university-card .card_main .speciality_info .facult_name {
+    margin-right: 10px;
+  }
+  .university-card .card_main .speciality_info .facult_name .name {
+    font-size: 1.05rem;
+  }
+  .university-card .card-title .university_name .name {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 426px) {
+  .university-card .card_main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  .university-card .subjects {
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+  }
 }
 .re-enter {
   position: fixed;
@@ -536,7 +607,6 @@ a:hover {
   cursor: pointer;
 }
 .re-enter p {
-  padding-top: 10px;
   text-align: center;
   vertical-align: middle;
   font-weight: 700;
@@ -585,7 +655,13 @@ a:hover {
     right: 30px;
   }
 }
+@media (max-width: 1025px) {
+  .re-enter {
+    width: 130px;
+  }
+}
 .overlay {
+  display: none;
   width: 100vw;
   height: 100vh;
   color: #fff;
@@ -594,6 +670,7 @@ a:hover {
   top: 0;
 }
 .overlay-wrap {
+  max-width: 1800px;
   padding-top: 100px;
   margin: 0 auto;
 }
@@ -683,8 +760,97 @@ a:hover {
 .inform-circle__text .reu-name {
   font-weight: 700;
 }
-.errorRequest {
-  text-align: center;
-  margin-top: 100px;
-  font-size: 25px;
+@media (max-width: 1400px) {
+  .overlay-wrap {
+    padding-top: 50px;
+  }
+  .overlay__title {
+    margin-bottom: 30px;
+  }
+  .overlay__content {
+    width: 90%;
+    padding-top: 10px;
+  }
+  .overlay__helpers {
+    font-size: 18px;
+  }
+  .overlay__help {
+    padding: 5px;
+  }
+  .overlay__inform {
+    margin-top: 120px;
+  }
+  .inform-circle {
+    width: 400px;
+    height: 400px;
+  }
+  .inform-circle__img {
+    width: 90px;
+  }
+  .inform-circle__title {
+    margin: 15px 0;
+  }
+  .inform-circle__text {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .overlay-wrap {
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .overlay__content {
+    width: 100%;
+  }
+  .overlay__helpers {
+    position: static;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  .overlay__help {
+    width: 300px;
+    margin-right: 15px;
+  }
+  .overlay__help:last-child {
+    margin-right: 0;
+  }
+  .overlay__inform {
+    margin-top: 10px;
+  }
+  .overlay__title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .overlay__title {
+    font-size: 25px;
+  }
+  .overlay__helpers {
+    font-size: 15px;
+  }
+}
+@media (max-width: 376px) {
+  .overlay__continue {
+    margin-top: 15px;
+  }
+  .button {
+    padding: 10px;
+  }
+  .inform-circle {
+    width: 350px;
+    height: 350px;
+  }
+  .inform-circle__img {
+    margin-top: 15px;
+  }
+  .inform-circle__title {
+    margin: 12px 0;
+  }
+  .inform-circle__text {
+    font-size: 16px;
+  }
 }
