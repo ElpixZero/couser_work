@@ -122,7 +122,6 @@
 
     </div>
   </div>
-
   
   <script src="./js/hadnlebars.js"> </script>
   <script src="./script.js"></script>
@@ -130,44 +129,44 @@
   <script id='universitiesTemplate' type='text/template'>
     {{#each list}}
     <div class="university-card">
-      <div class="card_title">
-        <div class="logo">
+      <div class="university-card__title">
+        <div class="university-card__logo">
           <img src="./img/reu.jpg" alt="РЭУ">
         </div>
-        <div class="university_name">
+        <div class="university-card__university">
           <div class="span">Вуз:</div>
           <div class="name">{{university}} / {{un_long_name}}</div>
         </div>
       </div>
 
-      <div class="card_main">
-        <div class="speciality_info">
-          <div class="facult_name">
+      <div class="university-card__main">
+        <div class="university-card__specialityInfo">
+          <div class="university-card__facult">
             <div class="span">Факультет:</div>
             <div class="name">{{facult}} / {{facult_long_name}}</div>
           </div>
-          <div class="speciality_name">
+          <div class="university-card__speciality">
             <div class="span">Cпециальность:</div>
             <div class="name">{{name}}</div>
           </div>
         </div>
       
-        <div class="points">
-          <div class="average_point">
+        <div class="university-card__points">
+          <div class="university-card__point university-card__point_average">
             <div class="point">{{points_average}}</div>
             <div class="info">средний балл</div>
           </div>
-          <div class="total_point">
+          <div class="university-card__point university-card__point_total">
               <div class="point">{{points}}</div>
               <div class="info">общий балл</div>
           </div>
         </div>
       </div>
 
-      <div class="subjects">
-        <div class="subject">{{subject_1}}</div>
-        <div class="subject">{{subject_2}}</div>
-        <div class="subject">{{subject_3}}</div>
+      <div class="university-card__subjects">
+        <div class="university-card__subject">{{subject_1}}</div>
+        <div class="university-card__subject">{{subject_2}}</div>
+        <div class="university-card__subject">{{subject_3}}</div>
       </div>
    </div>
     {{/each}}

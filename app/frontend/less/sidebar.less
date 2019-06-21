@@ -2,6 +2,7 @@
   margin-right: 50px;
 
   &__groups {
+    min-width: 280px;
     margin: 0 auto;
     max-width: 380px;
     background-color: #f3f2effa;
@@ -42,6 +43,18 @@
       margin-bottom: 0;
       line-height: 2;
       letter-spacing: 1.1px;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .ege-form {
+    &__group {
+      margin-bottom: 0;
+    }
+
+    &__submit {
+      padding: 10px;
     }
   }
 }

@@ -377,6 +377,7 @@ a:hover {
   margin-right: 50px;
 }
 .ege-form__groups {
+  min-width: 280px;
   max-width: 380px;
   background-color: #f3f2effa;
   margin: 0 auto;
@@ -421,6 +422,14 @@ a:hover {
   line-height: 2;
   letter-spacing: 1.1px;
 }
+@media (max-width: 1025px) {
+  .ege-form__group {
+    margin-bottom: 0;
+  }
+  .ege-form__submit {
+    padding: 10px;
+  }
+}
 .universities {
   display: block;
   width: 100%;
@@ -451,34 +460,34 @@ a:hover {
   height: 15px;
   background-color: #EC7B6A;
 }
-.university-card .card_title {
+.university-card__title {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
   margin-bottom: 25px;
 }
-.university-card .card_title .logo {
+.university-card__logo {
   width: 65px;
   margin-right: 25px;
 }
-.university-card .card_title .logo img {
+.university-card__logo img {
   width: 100%;
 }
-.university-card .card_title .university_name {
+.university-card__university {
   display: -webkit-box;
   display: flex;
 }
-.university-card .card_title .university_name .name {
+.university-card__university .name {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.university-card .card_title .university_name .span {
+.university-card__university .span {
   color: #939295;
   font-size: 1rem;
   margin-right: 10px;
 }
-.university-card .card_main {
+.university-card__main {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -487,23 +496,23 @@ a:hover {
           align-items: center;
   margin-bottom: 35px;
 }
-.university-card .card_main .speciality_info {
+.university-card__pecialityInfo {
   margin-bottom: 15px;
 }
-.university-card .card_main .speciality_info .facult_name {
+.university-card__facult {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
   margin-bottom: 15px;
 }
-.university-card .card_main .speciality_info .facult_name .span {
+.university-card__facult .span {
   margin-right: 54px;
 }
-.university-card .card_main .speciality_info .facult_name .name {
+.university-card__facult .name {
   font-size: 1.1rem;
 }
-.university-card .card_main .speciality_info .speciality_name {
+.university-card__speciality {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -511,7 +520,7 @@ a:hover {
   font-size: 1.2rem;
   margin-right: 100px;
 }
-.university-card .card_main .points {
+.university-card__points {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -519,18 +528,24 @@ a:hover {
   text-align: center;
   margin-right: 60px;
 }
-.university-card .card_main .points .average_point {
-  margin-right: 25px;
+.university-card__point {
+  margin-right: 15px;
 }
-.university-card .card_main .points .point {
+.university-card__point .point {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.university-card .card_main .points .info {
+.university-card__point .info {
   font-size: 0.7rem;
   color: #939295;
 }
-.university-card .subjects {
+.university-card__point_average {
+  margin-right: 25px;
+}
+.university-card__point_total {
+  margin-right: 0;
+}
+.university-card__subjects {
   display: -webkit-box;
   display: flex;
   color: #EC7B6A;
@@ -538,7 +553,7 @@ a:hover {
   -webkit-box-pack: end;
           justify-content: flex-end;
 }
-.university-card .subject {
+.university-card__subject {
   margin-right: 20px;
 }
 @media (max-width: 1025px) {
@@ -548,12 +563,6 @@ a:hover {
   .universities__errorRequest h2 {
     font-size: 30px;
   }
-  .ege-form__group {
-    margin-bottom: 0;
-  }
-  .ege-form__submit {
-    padding: 10px;
-  }
 }
 @media (max-width: 769px) {
   .university-card:after {
@@ -562,33 +571,33 @@ a:hover {
     width: 12px;
     height: 12px;
   }
-  .university-card .card_main .points {
+  .university-card__points {
     margin-right: 20px;
     margin-left: 10px;
   }
-  .university-card .card_main .speciality_info .speciality_name {
+  .university-card__speciality {
     margin-right: 20px;
   }
-  .university-card .card_main .speciality_info .speciality_name .name {
+  .university-card__speciality .name {
     font-size: 1.05rem;
   }
-  .university-card .card_main .speciality_info .facult_name {
+  .university-card__facult {
     margin-right: 10px;
   }
-  .university-card .card_main .speciality_info .facult_name .name {
+  .university-card__facult .name {
     font-size: 1.05rem;
   }
-  .university-card .card-title .university_name .name {
+  .university-card__name name {
     font-size: 1.1rem;
   }
 }
 @media (max-width: 426px) {
-  .university-card .card_main {
+  .university__main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
   }
-  .university-card .subjects {
+  .university__subjects {
     -webkit-box-pack: start;
             justify-content: flex-start;
   }
